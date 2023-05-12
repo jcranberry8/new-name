@@ -1,20 +1,40 @@
-.heading {
-    display: flex;
-    border: 5px;
-    background-color: black;
-    margin: 30px;
-    padding: 20px;
-    height: fit-content;
-
-    color: darkred;
-    text-align: center;
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
 }
 
-.hobbies {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: baseline;
-    border: 5px;
-    border-color: darkred;
+header {
+    grid-area: header;
+    background-color: black;
+    text-align: center;
+    color: darkred;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+main {
+    grid-area: main;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+}
+
+aside {
+    grid-area: aside;
+    background-color: darkred;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+    color: darkred;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
